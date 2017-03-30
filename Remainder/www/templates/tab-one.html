@@ -1,5 +1,19 @@
 <ion-view view-title="One">
   <ion-content>
+	   <form ng-submit="submit()">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Username</span>
+                        <input type="text" name="username" placeholder="enter username" ng-model="data.username">
+                    </label>
+
+                    <input class="button button-block button-positive" type="submit" name="submit" value="Submit to server">                    
+                </form>
+
+                <div class="card">
+                    <div class="item item-text-wrap">
+						Response:<label> {{response}} </label>
+                    </div>
+                </div>
     
   </ion-content>
 </ion-view>

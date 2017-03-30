@@ -1,17 +1,25 @@
 angular.module('starter.controllers', [])
 
-.controller('oneCtrl', function($scope, $http) {
-    $scope.data = {};
- 
+
+
+.controller('OneCtrl', function($scope) {
+	
+	 $scope.data = {};
+	$scope.response = "before ";
     $scope.submit = function(){
-        var link = 'http://nikola-breznjak.com/_testings/ionicPHP/api.php';
+        var link = 'http://localhost/Reminder/api.php';
+		    $scope.response = "after ";
+		
  
-        $http.post(link, {username : $scope.data.username}).then(function (res){
-            $scope.response = res.data;
+        
+		$http.post(link, {username : $scope.data.username}).then(function (res){
+         $scope.response = "res.data " ;
+			
         });
-    };
-});
+		
+  };
+})
 
-.controller('twoCtrl', function($scope) {})
+.controller('TwoCtrl', function($scope) {})
 
-.controller('threeCtrl', function($scope) {});
+.controller('ThreeCtrl', function($scope) {});
