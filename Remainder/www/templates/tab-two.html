@@ -4,14 +4,27 @@
                     <label class="item item-input item-stacked-label">
                         <span class="input-label">ReminderMsg</span>
                         <input type="text"name="ReminderMsg" placeholder="enter Reminder Msg" ng-model="data.ReminderMsg">
+						
 					</label>
+		  <label class="item item-input item-stacked-label">
+			<span class="input-label">CountDownTime</span>
+			  
+		  </label>
+		  <timer autostart="true" countdown="190061">{{days}} day{{daysS}}, {{hours}} hour{{hoursS}}, {{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}.</timer>
 		  			 <div class="padding-vertical">
 					<h5 class="text-center">12-Hour Format - 15 Mins Steps</h5>
 					<button class="button button-block button-positive overflowShow" ng-click="openTimePicker1()">
-						
-					  Open 12 hour timepicker
+							
+					 Set your time Set Here
 					</button>
-						 <button ion-button small>Small</button>
+						 <timer interval="1000" countdown="100" >{{countdown}}</timer>
+						<button class="button button-small button-stable">
+					   button-small
+					</button>
+
+					<button class="button button-large">
+					   button-large
+					</button>
 				  </div>
 
 		  

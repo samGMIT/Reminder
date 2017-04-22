@@ -30,7 +30,11 @@ angular.module('starter.controllers', [])
           } else {
             var selectedTime = new Date(val * 1000);
             console.log('Selected epoch is : ', val, 'and the time is ', selectedTime.getUTCHours(), 'H :', selectedTime.getUTCMinutes(), 'M');
+			  $scope.hours =selectedTime.getUTCHours();
+			  $scope.minutes = selectedTime.getUTCMinutes();
+			   $scope.seconds = selectedTime.getUTCSeconds();
           }
+			
         },
         inputTime: 0,
         format: 12,
